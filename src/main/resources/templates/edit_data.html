@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="align-items: center;align-content: center;width: available ; height: available;align-self: center">
+
+    <form style="height: 200px;width: 300px;border-color: azure;border-width: 2px;
+    background-color: aliceblue;display: flex;
+    align-items: center;
+    align-content: center;justify-content: center" action="/update">
+        <div>
+            <label>City:</label> <input id="uid" name="uid" style="height: 40px;background-color: beige" th:value="${user.getUid()}" th:hidden="true"><br><br>
+            <label>Name:</label> <input id="name" name="name" style="height: 40px;background-color: beige" th:value="${user.getName()}"><br><br>
+            <label>City:</label> <input id="city" name="city" style="height: 40px;background-color: beige" th:value="${user.getCity()}"><br><br>
+
+            <div style="display: flex;align-items: center; align-content: center;justify-content: center">
+                <input type="submit" value="submit">
+            </div>
+
+        </div>
+
+    </form>
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

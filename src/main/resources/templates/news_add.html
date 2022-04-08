@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NewsAdd</title>
+</head>
+<body>
+
+<H3 th:text="${result}">Add new</H3>
+
+<form style="background: beige;border-radius: 8px;width: 300px;padding: 20px" action="/addNews" th:type="post">
+    <label>Title</label>
+    <input th:name="title" style="height: 30px">
+    <br><br>
+    <label>Images</label>
+    <input th:name="images" style="height: 30px">
+    <br><br>
+    <label>Source</label>
+    <input th:name="source" style="height: 30px">
+    <br><br>
+    <label>Url</label>
+    <input th:name="url" style="height: 30px">
+    <br><br>
+    <div style="display: flex;align-items: center; align-content: center;justify-content: center">
+        <input type="submit" value="submit">
+    </div>
+</form>
+
+
+
+</body>
+</html>

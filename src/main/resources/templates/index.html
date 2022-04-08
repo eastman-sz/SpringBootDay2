@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <title>Welcome</title>
+
+    <link href="/css/main_page.css" rel=stylesheet type="text/css">
+
+    <!--<link th:href="@{/css/main_page.css}" rel=stylesheet type="text/css">-->
+
+</head>
+
+<body>
+
+    <div id="divP">
+        <div id="divF">
+            <div id="titleDev">
+                <h3>Title</h3>
+            </div>
+
+            <div style="width: 300px; height: 100%; background: gainsboro;align-items: center;
+            align-content: center;justify-items: center;justify-content: center;display: flex">
+
+                <form style="width: 260px; height: 160px; border-color: blueviolet;
+                        background: blueviolet;border-radius: 5px;">
+                    <div>
+                        <label th:text="Name"/> <input style="height: 30px;" type="text">
+                    </div>
+                    <div>
+                        <label th:text="Password"/> <input style="height: 30px;" type="text">
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

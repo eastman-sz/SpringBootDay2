@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+
+<style>
+    body{
+        align-content: center;
+    }
+
+</style>
+
+
+<body>
+
+    <div>
+        <table border="1" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>uid</th>
+                <th>name</th>
+                <th>city</th>
+                <th>operate</th>
+            </tr>
+
+            <tr th:each="user, a: ${users}">
+                <th th:text="${user.getUid()}">uid</th>
+                <th th:text="${user.getName()}">name</th>
+                <th th:text="${user.getCity()}">city</th>
+                <th >
+                   <!-- <a th:href="@{/del(uid=${user.getUid()})}">Del</a>-->
+
+                     <a th:href="@{'/delete/' + ${user.getUid()}}" th:method="post">Del</a>
+
+                    <a th:href="@{'/edit/' + ${user.getUid()}}" th:method="post">Edit</a>
+<!--                    <form action="/del" method="post">
+                        <input name="uid" th:value="${user.getUid()}" th:hidden="true">
+                        <input type="submit" value="del">
+                    </form>-->
+                </th>
+            </tr>
+        </table>
+
+        <div>
+
+            <tr th:each="user, a:${users}">
+              <a th:href="@{'/e/' + ${a.index + 1}}" th:value="a" th:text="${a.index}"></a>
+            </tr>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
